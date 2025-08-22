@@ -11,7 +11,6 @@ const CONFIG = {
   deadline: "31 août 2025",
   contactEmail: "stanislas.aumont@gmail.com",
   legalEntity: "Stanislas Aumont",
-
   // Lien officiel + tracking UTM
   ctaUrl:
     "https://www.fortuneo.fr/banque/offre-parrainage?utm_source=parrainage-stanislas&utm_medium=siteperso&utm_campaign=parrainage130",
@@ -48,6 +47,7 @@ const PrimaryButton = ({ href, onClick, children }) => (
   )
 );
 
+/* ----------------------- HERO ----------------------- */
 function Hero() {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
@@ -67,6 +67,7 @@ function Hero() {
             <span>{CONFIG.siteName}</span>
           </div>
           <div className="hidden gap-6 sm:flex">
+            <a href="#about" className="hover:text-white">La banque</a>
             <a href="#comment" className="hover:text-white">Fonctionnement</a>
             <a href="#offres" className="hover:text-white">Offres</a>
             <a href="#calcul" className="hover:text-white">Calculateur</a>
@@ -78,7 +79,6 @@ function Hero() {
           <div>
             <Badge>Parrainage {CONFIG.bankName}</Badge>
 
-            {/* ⇩⇩ Accroche modifiée ⇩⇩ */}
             <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
               Parrainage {CONFIG.bankName} : vos{" "}
               <span className="underline decoration-white/60 decoration-4 underline-offset-4">
@@ -93,7 +93,6 @@ function Hero() {
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              {/* ⇩⇩ Nouveau bouton CTA vers l'URL officielle + UTM ⇩⇩ */}
               <PrimaryButton href={CONFIG.ctaUrl}>🚀 Ouvrir un compte</PrimaryButton>
 
               <button
@@ -107,7 +106,6 @@ function Hero() {
               </button>
             </div>
 
-            {/* Note de confiance courte */}
             <p className="mt-3 text-sm text-white/80">
               Site personnel d’information. Offre officielle soumise à conditions (montants susceptibles d’évoluer).
             </p>
@@ -116,10 +114,22 @@ function Hero() {
           <div className="rounded-3xl border border-white/15 bg-white/95 p-6 text-gray-800 shadow-xl sm:ml-auto">
             <h2 className="text-lg font-semibold">Comment profiter de l’offre</h2>
             <ol className="mt-4 space-y-3">
-              <li className="flex gap-3"><span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">1</span> Demande d’ouverture en ligne</li>
-              <li className="flex gap-3"><span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">2</span> Saisir le code parrain <b>{CONFIG.referralCode}</b></li>
-              <li className="flex gap-3"><span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">3</span> Activer le compte + 1ère opération si requis</li>
-              <li className="flex gap-3"><span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">4</span> Versement de la prime</li>
+              <li className="flex gap-3">
+                <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">1</span>
+                Demande d’ouverture en ligne
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">2</span>
+                Saisir le code parrain <b>{CONFIG.referralCode}</b>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">3</span>
+                Activer le compte + 1ère opération si requis
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">4</span>
+                Versement de la prime
+              </li>
             </ol>
             <a href="#comment" className="mt-4 inline-block text-sm font-medium text-emerald-700 hover:underline">En savoir plus</a>
           </div>
@@ -129,6 +139,71 @@ function Hero() {
   );
 }
 
+/* ------------------- A PROPOS DE LA BANQUE ------------------- */
+function AboutBank() {
+  return (
+    <section id="about" className="bg-gray-50 py-16 sm:py-20">
+      <Container>
+        <div className="mb-8 text-center">
+          <Badge>Pourquoi choisir {CONFIG.bankName} ?</Badge>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Une banque en ligne fiable et complète
+          </h2>
+          <p className="mt-3 max-w-2xl mx-auto text-gray-600">
+            {CONFIG.bankName} est une banque 100% en ligne appartenant au Crédit Mutuel Arkéa, un grand groupe bancaire
+            français. Récompensée régulièrement pour la qualité de ses services, elle accompagne déjà un large public.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Fiabilité & sécurité</h3>
+            <p className="mt-2 text-gray-600">
+              Établissement agréé et protégé par la garantie des dépôts (jusqu’à 100 000€).
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Services complets</h3>
+            <p className="mt-2 text-gray-600">
+              Compte courant, épargne, assurance-vie, bourse… tout en ligne et sans frais cachés.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Carte bancaire gratuite</h3>
+            <p className="mt-2 text-gray-600">
+              Cartes Mastercard (jusqu’à World Elite) sans cotisation, sous conditions d’utilisation.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Carte virtuelle</h3>
+            <p className="mt-2 text-gray-600">
+              Numéro à usage unique pour vos achats en ligne : simple et ultra-sécurisé.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Application mobile</h3>
+            <p className="mt-2 text-gray-600">
+              Pilotage de la carte, virements, notifications… l’essentiel au bout des doigts.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Frais réduits</h3>
+            <p className="mt-2 text-gray-600">
+              Tenue de compte, virements, carte : la plupart des services sont gratuits.
+            </p>
+          </Card>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+/* ----------------------- STEPS ----------------------- */
 function Steps() {
   const items = [
     { t: "Demande d’ouverture", d: "Formulaire en ligne + justificatifs." },
@@ -142,7 +217,9 @@ function Steps() {
         <div className="mb-8">
           <Badge>Mode d’emploi</Badge>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comment ça marche ?</h2>
-          <p className="mt-3 max-w-2xl text-gray-600">Processus rapide et 100% en ligne. Les montants sont indicatifs : vérifiez toujours l’offre officielle.</p>
+          <p className="mt-3 max-w-2xl text-gray-600">
+            Processus rapide et 100% en ligne. Les montants sont indicatifs : vérifiez toujours l’offre officielle.
+          </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((it, i) => (
@@ -158,6 +235,7 @@ function Steps() {
   );
 }
 
+/* ----------------------- OFFERS ----------------------- */
 function Offers() {
   const offers = [
     { title: "Prime de bienvenue", amount: CONFIG.filleulBonus, desc: "Offre sous conditions d’éligibilité et d’activation." },
@@ -189,6 +267,7 @@ function Offers() {
   );
 }
 
+/* ----------------------- CALCULATOR ----------------------- */
 function Calculator() {
   const [filleuls, setFilleuls] = useState(3);
   const [inclureBienvenue, setInclureBienvenue] = useState(true);
@@ -250,6 +329,7 @@ function Calculator() {
   );
 }
 
+/* ----------------------- FAQ ----------------------- */
 function FAQ() {
   const faqs = [
     { q: "Qui est éligible ?", a: "Les nouveaux clients répondant aux critères de l’offre officielle de la banque." },
@@ -280,6 +360,7 @@ function FAQ() {
   );
 }
 
+/* ----------------------- FOOTER ----------------------- */
 function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white py-10 text-sm">
@@ -303,6 +384,7 @@ function Footer() {
         <div>
           <h3 className="font-semibold text-gray-900">Liens utiles</h3>
           <ul className="mt-3 space-y-1 text-gray-700">
+            <li><a className="text-emerald-700 hover:underline" href="#about">À propos de la banque</a></li>
             <li><a className="text-emerald-700 hover:underline" href="#comment">Comment ça marche</a></li>
             <li><a className="text-emerald-700 hover:underline" href="#offres">Offres & montants</a></li>
             <li><a className="text-emerald-700 hover:underline" href="#faq">FAQ</a></li>
@@ -316,82 +398,17 @@ function Footer() {
   );
 }
 
+/* ----------------------- APP ----------------------- */
 export default function App() {
   return (
     <main className="font-sans antialiased">
       <Hero />
+      <AboutBank />
       <Steps />
       <Offers />
       <Calculator />
       <FAQ />
       <Footer />
     </main>
-  );
-}
-function AboutBank() {
-  return (
-    <section id="about" className="bg-gray-50 py-16 sm:py-20">
-      <Container>
-        <div className="mb-8 text-center">
-          <Badge>Pourquoi choisir Fortuneo ?</Badge>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Une banque en ligne fiable et complète
-          </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-gray-600">
-            Fortuneo est une banque 100% en ligne appartenant au Crédit Mutuel Arkéa, un grand groupe bancaire français. 
-            Récompensée régulièrement pour la qualité de ses services, elle compte déjà plus de <b>1 million de clients</b>.
-          </p>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card>
-            <h3 className="text-lg font-semibold text-gray-900">Fiabilité et sécurité</h3>
-            <p className="mt-2 text-gray-600">
-              Établissement agréé et protégé par la garantie des dépôts (jusqu’à 100 000€), Fortuneo s’appuie sur la solidité 
-              du groupe Crédit Mutuel Arkéa.
-            </p>
-          </Card>
-
-          <Card>
-            <h3 className="text-lg font-semibold text-gray-900">Services bancaires complets</h3>
-            <p className="mt-2 text-gray-600">
-              Comptes courants, épargne, assurance-vie, bourse… vous disposez de toutes les solutions bancaires 
-              accessibles en ligne et sans frais cachés.
-            </p>
-          </Card>
-
-          <Card>
-            <h3 className="text-lg font-semibold text-gray-900">Carte bancaire gratuite</h3>
-            <p className="mt-2 text-gray-600">
-              Différentes cartes (Mastercard, Gold, World Elite) sont proposées, sans cotisation, sous conditions 
-              d’utilisation. Paiements et retraits dans le monde entier.
-            </p>
-          </Card>
-
-          <Card>
-            <h3 className="text-lg font-semibold text-gray-900">Carte virtuelle sécurisée</h3>
-            <p className="mt-2 text-gray-600">
-              Pour vos achats en ligne, Fortuneo propose une carte virtuelle à usage unique : pratique et ultra-sécurisée.
-            </p>
-          </Card>
-
-          <Card>
-            <h3 className="text-lg font-semibold text-gray-900">Application mobile</h3>
-            <p className="mt-2 text-gray-600">
-              Gérez vos comptes en toute simplicité via une appli moderne et intuitive (iOS et Android). 
-              Notifications, virements, pilotage de carte en temps réel.
-            </p>
-          </Card>
-
-          <Card>
-            <h3 className="text-lg font-semibold text-gray-900">Frais réduits</h3>
-            <p className="mt-2 text-gray-600">
-              La plupart des services sont gratuits (tenue de compte, carte bancaire, virements). 
-              Un vrai gain par rapport aux banques traditionnelles.
-            </p>
-          </Card>
-        </div>
-      </Container>
-    </section>
   );
 }
