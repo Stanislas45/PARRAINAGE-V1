@@ -328,3 +328,70 @@ export default function App() {
     </main>
   );
 }
+function AboutBank() {
+  return (
+    <section id="about" className="bg-gray-50 py-16 sm:py-20">
+      <Container>
+        <div className="mb-8 text-center">
+          <Badge>Pourquoi choisir Fortuneo ?</Badge>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Une banque en ligne fiable et complète
+          </h2>
+          <p className="mt-3 max-w-2xl mx-auto text-gray-600">
+            Fortuneo est une banque 100% en ligne appartenant au Crédit Mutuel Arkéa, un grand groupe bancaire français. 
+            Récompensée régulièrement pour la qualité de ses services, elle compte déjà plus de <b>1 million de clients</b>.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Fiabilité et sécurité</h3>
+            <p className="mt-2 text-gray-600">
+              Établissement agréé et protégé par la garantie des dépôts (jusqu’à 100 000€), Fortuneo s’appuie sur la solidité 
+              du groupe Crédit Mutuel Arkéa.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Services bancaires complets</h3>
+            <p className="mt-2 text-gray-600">
+              Comptes courants, épargne, assurance-vie, bourse… vous disposez de toutes les solutions bancaires 
+              accessibles en ligne et sans frais cachés.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Carte bancaire gratuite</h3>
+            <p className="mt-2 text-gray-600">
+              Différentes cartes (Mastercard, Gold, World Elite) sont proposées, sans cotisation, sous conditions 
+              d’utilisation. Paiements et retraits dans le monde entier.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Carte virtuelle sécurisée</h3>
+            <p className="mt-2 text-gray-600">
+              Pour vos achats en ligne, Fortuneo propose une carte virtuelle à usage unique : pratique et ultra-sécurisée.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Application mobile</h3>
+            <p className="mt-2 text-gray-600">
+              Gérez vos comptes en toute simplicité via une appli moderne et intuitive (iOS et Android). 
+              Notifications, virements, pilotage de carte en temps réel.
+            </p>
+          </Card>
+
+          <Card>
+            <h3 className="text-lg font-semibold text-gray-900">Frais réduits</h3>
+            <p className="mt-2 text-gray-600">
+              La plupart des services sont gratuits (tenue de compte, carte bancaire, virements). 
+              Un vrai gain par rapport aux banques traditionnelles.
+            </p>
+          </Card>
+        </div>
+      </Container>
+    </section>
+  );
+}
