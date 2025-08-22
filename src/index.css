@@ -3,3 +3,48 @@
 @tailwind utilities;
 
 body { margin: 0; font-family: system-ui, sans-serif; }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Parrainage Fortuneo 2025 — Jusqu’à 130€ offerts</title>
+  <meta name="description" content="Parrainage Fortuneo : jusqu’à 130€ offerts avant le 31 août 2025. Guide clair, code parrain 12550423, étapes et simulateur pour ouvrir un compte en toute confiance.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://parrainage-stanislas.vercel.app/" />
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Parrainage Fortuneo 2025 — Jusqu’à 130€ offerts">
+  <meta property="og:description" content="Guide clair + code parrain 12550423. Profitez du parrainage Fortuneo avant le 31 août 2025.">
+  <meta property="og:url" content="https://parrainage-stanislas.vercel.app/">
+  <meta property="og:image" content="https://parrainage-stanislas.vercel.app/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Parrainage Fortuneo 2025 — Jusqu’à 130€ offerts">
+  <meta name="twitter:description" content="Code parrain 12550423. Ouvrir un compte Fortuneo en quelques minutes.">
+  <meta name="twitter:image" content="https://parrainage-stanislas.vercel.app/og-image.png">
+
+  <!-- JSON-LD (données structurées) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Parrainage Fortuneo",
+    "url": "https://parrainage-stanislas.vercel.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://parrainage-stanislas.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Icônes -->
+  <link rel="icon" href="/favicon.ico">
+  <meta name="theme-color" content="#059669" />
+
+  <!-- Vite entry -->
+  <script type="module" src="/src/main.jsx"></script>
+</head>
