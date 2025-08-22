@@ -11,20 +11,20 @@ body { margin: 0; font-family: system-ui, sans-serif; }
   <meta name="description" content="Parrainage Fortuneo : jusqu’à 130€ offerts avant le 31 août 2025. Guide clair, code parrain 12550423, étapes et simulateur pour ouvrir un compte en toute confiance.">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://parrainage-stanislas.vercel.app/" />
+  <link rel="canonical" href="https://www.parrainage-fortuneo.org/" />
 
   <!-- Open Graph (Facebook/LinkedIn) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Parrainage Fortuneo 2025 — Jusqu’à 130€ offerts">
   <meta property="og:description" content="Guide clair + code parrain 12550423. Profitez du parrainage Fortuneo avant le 31 août 2025.">
-  <meta property="og:url" content="https://parrainage-stanislas.vercel.app/">
-  <meta property="og:image" content="https://parrainage-stanislas.vercel.app/og-image.png">
+  <meta property="og:url" content="https://www.parrainage-fortuneo.org/">
+  <meta property="og:image" content="https://www.parrainage-fortuneo.org/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Parrainage Fortuneo 2025 — Jusqu’à 130€ offerts">
   <meta name="twitter:description" content="Code parrain 12550423. Ouvrir un compte Fortuneo en quelques minutes.">
-  <meta name="twitter:image" content="https://parrainage-stanislas.vercel.app/og-image.png">
+  <meta name="twitter:image" content="https://www.parrainage-fortuneo.org/">
 
   <!-- JSON-LD (données structurées) -->
   <script type="application/ld+json">
@@ -48,3 +48,6 @@ body { margin: 0; font-family: system-ui, sans-serif; }
   <!-- Vite entry -->
   <script type="module" src="/src/main.jsx"></script>
 </head>
+
+<meta name="description" content="Profitez de l’offre de parrainage Fortuneo : jusqu’à 130€ offerts avant le 31 août 2025. Ouvrez votre compte en ligne et découvrez tous les avantages de la banque en ligne.">
+
