@@ -7,7 +7,7 @@ const CONFIG = {
   referralCode: "12550423",
   filleulBonus: 130,    // prime de bienvenue (indicative)
   parrainBonus: 110,    // gain par parrainage (indicatif)
-  totalOffer: 240,     // mise en avant globale
+  totalOffer: 130,     // mise en avant globale
   deadline: "31 décembre 2025",
   contactEmail: "stanislas.aumont@gmail.com",
   legalEntity: "Stanislas Aumont",
@@ -269,7 +269,7 @@ function Offers() {
 
 /* ----------------------- CALCULATOR ----------------------- */
 function Calculator() {
-  const [filleuls, setFilleuls] = useState(3);
+  const [filleuls, setFilleuls] = useState(1);
   const [inclureBienvenue, setInclureBienvenue] = useState(true);
 
   const gainParrain = useMemo(() => Math.max(0, Number(filleuls) || 0) * CONFIG.parrainBonus, [filleuls]);
