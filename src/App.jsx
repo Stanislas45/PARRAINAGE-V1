@@ -8,7 +8,7 @@ const CONFIG = {
   filleulBonus: 130,    // prime de bienvenue (indicative)
   parrainBonus: 110,    // gain par parrainage (indicatif)
   totalOffer: 130,     // mise en avant globale
-  deadline: "31 décembre 2025",
+  deadline: "31 décembre 2026",
   contactEmail: "stanislas.aumont@gmail.com",
   legalEntity: "Stanislas Aumont",
   // Lien officiel + tracking UTM
