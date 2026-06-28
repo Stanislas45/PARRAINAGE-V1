@@ -1,12 +1,23 @@
 {
   "name": "parrainage-fortuneo",
   "version": "1.0.0",
+  "description": "Site personnel d'information sur le code parrainage Fortuneo 2026 et les primes de bienvenue.",
   "private": true,
+  "author": "Stanislas Aumont",
+  "homepage": "https://www.parrainage-fortuneo.org/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "keywords": [
+    "parrainage fortuneo",
+    "code parrainage fortuneo",
+    "code parrain fortuneo",
+    "prime fortuneo",
+    "fortuneo 2026",
+    "banque en ligne"
+  ],
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
