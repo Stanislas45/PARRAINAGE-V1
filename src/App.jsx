@@ -98,6 +98,9 @@ function Hero() {
             <a href="#guide" className="hover:text-white">
               Guide
             </a>
+            <a href="#articles" className="hover:text-white">
+              Articles
+            </a>
             <a href="#faq" className="hover:text-white">
               FAQ
             </a>
@@ -563,6 +566,7 @@ function SeoContent() {
     </section>
   );
 }
+
 /* ----------------------- ARTICLES SEO ----------------------- */
 function Articles() {
   const articles = [
@@ -731,6 +735,7 @@ function Articles() {
     </section>
   );
 }
+
 /* ----------------------- FAQ ----------------------- */
 function FAQ() {
   const faqs = [
@@ -870,6 +875,11 @@ function Footer() {
               </a>
             </li>
             <li>
+              <a className="text-emerald-700 hover:underline" href="#articles">
+                Articles Fortuneo
+              </a>
+            </li>
+            <li>
               <a className="text-emerald-700 hover:underline" href="#faq">
                 FAQ parrainage Fortuneo
               </a>
@@ -897,6 +907,7 @@ export default function App() {
       <Offers />
       <Calculator />
       <SeoContent />
+      <Articles />
       <FAQ />
       <Footer />
     </main>
