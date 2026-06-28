@@ -95,6 +95,9 @@ function Hero() {
             <a href="#calcul" className="hover:text-white">
               Calculateur
             </a>
+            <a href="#guide" className="hover:text-white">
+              Guide
+            </a>
             <a href="#faq" className="hover:text-white">
               FAQ
             </a>
@@ -495,32 +498,114 @@ function Calculator() {
   );
 }
 
+/* ----------------------- SEO CONTENT ----------------------- */
+function SeoContent() {
+  return (
+    <section id="guide" className="bg-white py-16 sm:py-20">
+      <Container>
+        <div className="mx-auto max-w-4xl">
+          <Badge>Guide parrainage Fortuneo</Badge>
+
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Code parrainage Fortuneo 2026 : comment bénéficier de la prime ?
+          </h2>
+
+          <div className="mt-6 space-y-5 text-gray-700">
+            <p>
+              Le parrainage Fortuneo permet à un nouveau client, appelé filleul,
+              d’ouvrir un compte en utilisant un code parrain. En renseignant le code{" "}
+              <strong>{CONFIG.referralCode}</strong> lors de l’inscription, le filleul
+              peut bénéficier de l’offre de parrainage en cours, sous réserve de respecter
+              les conditions fixées par Fortuneo.
+            </p>
+
+            <p>
+              Pour utiliser le code parrainage Fortuneo, commencez une demande
+              d’ouverture de compte en ligne, puis saisissez le code parrain dans le champ
+              prévu à cet effet. Le code à utiliser est :{" "}
+              <strong>{CONFIG.referralCode}</strong>.
+            </p>
+
+            <p>
+              Les montants affichés sur ce site, notamment la prime filleul de{" "}
+              <strong>{CONFIG.filleulBonus}€</strong> et la prime parrain de{" "}
+              <strong>{CONFIG.parrainBonus}€</strong>, sont donnés à titre indicatif. Les
+              offres bancaires peuvent évoluer dans le temps. Il est donc important de
+              vérifier les conditions officielles Fortuneo avant toute souscription.
+            </p>
+
+            <p>
+              Ce site a pour objectif d’expliquer simplement le fonctionnement du
+              parrainage Fortuneo, de faciliter l’accès au code parrain et d’aider les
+              internautes à comprendre les étapes d’ouverture de compte.
+            </p>
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
+            <h3 className="text-xl font-semibold text-emerald-900">
+              Code parrain Fortuneo à copier
+            </h3>
+
+            <p className="mt-2 text-emerald-800">
+              Utilisez le code suivant lors de votre inscription Fortuneo :
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <span className="rounded-xl bg-white px-5 py-3 font-mono text-lg font-semibold text-emerald-700 ring-1 ring-emerald-200">
+                {CONFIG.referralCode}
+              </span>
+
+              <PrimaryButton href={CONFIG.ctaUrl}>🚀 Ouvrir un compte</PrimaryButton>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 /* ----------------------- FAQ ----------------------- */
 function FAQ() {
   const faqs = [
     {
       q: "Quel est le code parrainage Fortuneo à utiliser ?",
-      a: `Le code parrainage Fortuneo à utiliser est ${CONFIG.referralCode}. Il doit être saisi lors de l’ouverture du compte, dans l’espace prévu pour le parrainage.`,
+      a: `Le code parrainage Fortuneo à utiliser est ${CONFIG.referralCode}. Il doit être renseigné lors de l’ouverture du compte, dans le champ prévu pour le parrainage.`,
     },
     {
       q: "Où mettre le code parrain Fortuneo ?",
-      a: "Le code parrain est à renseigner pendant le parcours d’ouverture de compte Fortuneo, lorsqu’un champ dédié au parrainage est proposé.",
+      a: "Le code parrain Fortuneo doit être saisi pendant le parcours d’ouverture de compte, lorsque Fortuneo propose le champ dédié au parrainage.",
+    },
+    {
+      q: "Comment profiter de l’offre de parrainage Fortuneo ?",
+      a: `Pour profiter de l’offre, cliquez sur “Ouvrir un compte”, commencez votre inscription sur Fortuneo, puis saisissez le code parrain ${CONFIG.referralCode} au moment demandé.`,
     },
     {
       q: "Combien peut-on recevoir avec le parrainage Fortuneo ?",
-      a: "Le montant de la prime dépend de l’offre en cours et des conditions d’éligibilité. Les montants indiqués sur ce site sont donnés à titre indicatif.",
+      a: `La prime filleul peut aller jusqu’à ${CONFIG.filleulBonus}€ selon l’offre en cours. Les montants peuvent évoluer, il faut donc toujours vérifier les conditions officielles Fortuneo avant de souscrire.`,
+    },
+    {
+      q: "Combien reçoit le parrain ?",
+      a: `Le parrain peut recevoir une prime indicative de ${CONFIG.parrainBonus}€ par filleul validé, selon les conditions de l’offre de parrainage Fortuneo en vigueur.`,
     },
     {
       q: "Quand la prime Fortuneo est-elle versée ?",
-      a: "La prime est généralement versée après validation du dossier, ouverture effective du compte et respect des éventuelles conditions demandées par Fortuneo.",
+      a: "La prime est généralement versée après l’ouverture effective du compte, la validation du dossier et le respect des éventuelles conditions demandées par Fortuneo.",
     },
     {
-      q: "Le parrainage Fortuneo est-il cumulable avec une autre offre ?",
-      a: "Les conditions de cumul peuvent évoluer. Il faut toujours consulter les conditions officielles Fortuneo avant de souscrire.",
+      q: "Le parrainage Fortuneo est-il cumulable avec une offre de bienvenue ?",
+      a: "Les règles de cumul peuvent changer selon les périodes. Il est nécessaire de consulter les conditions officielles Fortuneo avant de finaliser l’ouverture du compte.",
+    },
+    {
+      q: "Peut-on utiliser le code parrainage Fortuneo plusieurs fois ?",
+      a: "Un filleul ne peut généralement utiliser qu’un seul code parrain lors de son inscription. Le parrain peut, lui, parrainer plusieurs personnes dans la limite fixée par Fortuneo.",
     },
     {
       q: "Ce site est-il le site officiel Fortuneo ?",
       a: "Non. Ce site est un site personnel d’information sur le parrainage Fortuneo. Il n’est pas affilié officiellement à Fortuneo.",
+    },
+    {
+      q: "Pourquoi utiliser ce code parrainage Fortuneo ?",
+      a: `Le code ${CONFIG.referralCode} permet d’indiquer un parrain lors de l’ouverture du compte Fortuneo et de bénéficier de l’offre de parrainage en cours, sous réserve d’éligibilité.`,
     },
   ];
 
@@ -531,12 +616,12 @@ function FAQ() {
           <Badge>FAQ</Badge>
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Questions fréquentes sur le parrainage Fortuneo
+            Questions fréquentes sur le code parrainage Fortuneo
           </h2>
 
           <p className="mt-3 max-w-2xl text-gray-600">
-            Retrouvez les réponses aux questions les plus courantes sur le code
-            parrainage Fortuneo, la prime de bienvenue et les conditions de l’offre.
+            Retrouvez les réponses aux questions les plus courantes sur le parrainage
+            Fortuneo, le code parrain, la prime filleul et les conditions de l’offre.
           </p>
         </div>
 
@@ -613,6 +698,11 @@ function Footer() {
               </a>
             </li>
             <li>
+              <a className="text-emerald-700 hover:underline" href="#guide">
+                Guide parrainage Fortuneo
+              </a>
+            </li>
+            <li>
               <a className="text-emerald-700 hover:underline" href="#faq">
                 FAQ parrainage Fortuneo
               </a>
@@ -639,6 +729,7 @@ export default function App() {
       <Steps />
       <Offers />
       <Calculator />
+      <SeoContent />
       <FAQ />
       <Footer />
     </main>
