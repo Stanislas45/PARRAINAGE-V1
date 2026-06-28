@@ -563,7 +563,174 @@ function SeoContent() {
     </section>
   );
 }
+/* ----------------------- ARTICLES SEO ----------------------- */
+function Articles() {
+  const articles = [
+    {
+      title: "Parrainage Fortuneo 2026 : comment obtenir la prime ?",
+      intro:
+        "Le parrainage Fortuneo permet à un nouveau client d’utiliser un code parrain lors de son ouverture de compte afin de bénéficier de l’offre en cours.",
+      content: (
+        <>
+          <p>
+            Pour obtenir la prime de parrainage Fortuneo, le filleul doit commencer son
+            inscription en ligne, renseigner le code parrain{" "}
+            <strong>{CONFIG.referralCode}</strong>, puis respecter les conditions de
+            l’offre en vigueur.
+          </p>
+          <p>
+            La prime est généralement liée à l’ouverture effective du compte, à la
+            validation du dossier et aux éventuelles opérations demandées par Fortuneo.
+            Les montants peuvent évoluer : il est donc important de vérifier l’offre
+            officielle avant de finaliser l’inscription.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Fortuneo ou Boursobank : quelle banque choisir ?",
+      intro:
+        "Fortuneo et Boursobank sont deux banques en ligne connues en France. Le bon choix dépend surtout de votre profil et de vos besoins.",
+      content: (
+        <>
+          <p>
+            Fortuneo peut être intéressante pour les personnes qui recherchent une banque
+            en ligne complète avec compte courant, cartes bancaires, assurance-vie, bourse
+            et produits d’épargne. Le parrainage peut aussi permettre de profiter d’une
+            prime lors de l’ouverture du compte.
+          </p>
+          <p>
+            Boursobank est également très connue et propose une offre bancaire large.
+            Pour choisir, il faut comparer les cartes proposées, les conditions de revenus,
+            les frais éventuels, l’application mobile, les plafonds et les offres de
+            bienvenue disponibles au moment de la souscription.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Où mettre le code parrain Fortuneo lors de l’inscription ?",
+      intro:
+        "Le code parrain Fortuneo doit être renseigné pendant le parcours d’ouverture de compte, dans le champ dédié au parrainage.",
+      content: (
+        <>
+          <p>
+            Lors de votre inscription Fortuneo, recherchez le champ lié au parrainage ou
+            au code parrain. C’est à cet endroit qu’il faut saisir le code{" "}
+            <strong>{CONFIG.referralCode}</strong>.
+          </p>
+          <p>
+            Il est important de le saisir pendant l’ouverture du compte, car il peut être
+            difficile, voire impossible, de l’ajouter après coup si le dossier a déjà été
+            validé. Avant de confirmer votre demande, vérifiez donc que le code parrain a
+            bien été pris en compte.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Avis Fortuneo : avantages et inconvénients",
+      intro:
+        "Fortuneo est une banque en ligne qui peut convenir à de nombreux profils, mais il est important de regarder les avantages comme les limites.",
+      content: (
+        <>
+          <p>
+            Parmi les avantages souvent recherchés chez Fortuneo, on retrouve la gestion
+            en ligne du compte, les cartes bancaires, l’épargne, l’assurance-vie, la bourse
+            et les frais potentiellement réduits selon les conditions d’utilisation.
+          </p>
+          <p>
+            Les limites à vérifier concernent surtout les conditions d’éligibilité, les
+            conditions de gratuité des cartes, les justificatifs demandés, les plafonds et
+            les frais en cas de non-respect des conditions. Le parrainage peut être un
+            bonus intéressant, mais il ne doit pas être le seul critère de choix.
+          </p>
+        </>
+      ),
+    },
+    {
+      title: "Carte Gold Fortuneo : conditions, frais et parrainage",
+      intro:
+        "La carte Gold Fortuneo peut intéresser les personnes qui cherchent une carte bancaire complète, mais elle reste soumise à conditions.",
+      content: (
+        <>
+          <p>
+            La carte Gold Fortuneo est une carte bancaire haut de gamme proposée sous
+            conditions. Avant de la choisir, il faut vérifier les revenus demandés, les
+            conditions d’utilisation, les frais éventuels et les garanties associées.
+          </p>
+          <p>
+            Le parrainage Fortuneo peut accompagner une ouverture de compte, mais les
+            conditions de la carte et les conditions de la prime doivent être vérifiées
+            séparément. Le code parrain à utiliser lors de l’inscription est{" "}
+            <strong>{CONFIG.referralCode}</strong>.
+          </p>
+        </>
+      ),
+    },
+  ];
 
+  return (
+    <section id="articles" className="bg-gray-50 py-16 sm:py-20">
+      <Container>
+        <div className="mb-8">
+          <Badge>Articles Fortuneo</Badge>
+
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Guides utiles autour du parrainage Fortuneo
+          </h2>
+
+          <p className="mt-3 max-w-2xl text-gray-600">
+            Retrouvez des articles simples pour comprendre le parrainage Fortuneo,
+            l’utilisation du code parrain, les primes possibles et les points à vérifier
+            avant d’ouvrir un compte.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          {articles.map((article, index) => (
+            <Card key={index}>
+              <h3 className="text-xl font-semibold text-gray-900">
+                {article.title}
+              </h3>
+
+              <p className="mt-2 text-gray-600">{article.intro}</p>
+
+              <details className="mt-4 rounded-xl bg-gray-50 p-4">
+                <summary className="cursor-pointer font-medium text-emerald-700">
+                  Lire l’article
+                </summary>
+
+                <div className="mt-4 space-y-3 text-gray-700">
+                  {article.content}
+                </div>
+              </details>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-8 rounded-2xl bg-emerald-50 p-6 ring-1 ring-emerald-100">
+          <h3 className="text-xl font-semibold text-emerald-900">
+            Code parrainage Fortuneo à utiliser
+          </h3>
+
+          <p className="mt-2 text-emerald-800">
+            Pour ouvrir un compte Fortuneo avec un code parrain, vous pouvez utiliser le
+            code suivant :
+          </p>
+
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <span className="rounded-xl bg-white px-5 py-3 font-mono text-lg font-semibold text-emerald-700 ring-1 ring-emerald-200">
+              {CONFIG.referralCode}
+            </span>
+
+            <PrimaryButton href={CONFIG.ctaUrl}>🚀 Ouvrir un compte</PrimaryButton>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
 /* ----------------------- FAQ ----------------------- */
 function FAQ() {
   const faqs = [
